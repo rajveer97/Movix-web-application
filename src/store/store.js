@@ -1,6 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-// Please Note: Not same as in the tutorial
-export default configureStore({
-  reducer: {},
-})
+import homeSlice from './homeSlice';
+
+export const store =  configureStore({
+  reducer: {
+    home: homeSlice,
+  },
+});
